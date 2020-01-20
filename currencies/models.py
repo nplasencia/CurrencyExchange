@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class Currency(models.Model):
+    symbol = models.CharField(max_length=5)
+    name = models.CharField(max_length=50)
+    visible = models.BooleanField(default=True)
+    pub_date = models.DateTimeField('date published')
